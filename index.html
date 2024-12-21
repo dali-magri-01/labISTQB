@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Méthodologies de Développement Piloté par les Tests</title>
+    <title>Test-Driven Development Methodologies</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-gray-900 shadow-lg fixed top-0 left-0 right-0 z-50">
+<body class="bg-black text-white">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-red-700 shadow-lg fixed top-0 left-0 right-0 z-50">
     <div id="menu-button" class="menu-btn">
         <div class="menu-btn__burger"></div>
     </div>
@@ -21,57 +22,56 @@
     </ul>
 </nav>
 
-<!-- En-tête de la page -->
-<header class="jumbotron text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-24">
-    <h1 class="text-5xl font-bold">Bienvenue dans les Méthodologies de Développement Piloté par les Tests</h1>
-    <p class="text-lg mt-6">Explorez les concepts de TDD, ATDD, BDD et Shift Left</p>
+<!-- Header Section -->
+<header class="jumbotron text-center bg-gradient-to-r from-red-600 via-black to-gray-900 text-white py-24">
+    <h1 class="text-5xl font-bold">Welcome to Test-Driven Development Methodologies</h1>
+    <p class="text-lg mt-6">Explore the concepts of TDD, ATDD, BDD, and Shift Left</p>
     <div class="mt-8">
-        <a href="#tdd" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg transform hover:scale-110 transition-all duration-300 ease-in-out">
-            Commencer
+        <a href="#tdd" class="btn bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg transform hover:scale-110 transition-all duration-300 ease-in-out">
+            Get Started
         </a>
     </div>
 </header>
 
-<!-- Section TDD -->
-<section id="tdd" class="container mx-auto my-16 bg-white rounded-lg shadow-lg p-8">
-    <h2 class="text-3xl font-bold text-indigo-600">Développement Piloté par les Tests (TDD)</h2>
-    <p class="mt-4 text-gray-700">Une brève explication de TDD et de son fonctionnement...</p>
+<!-- TDD Section -->
+<section id="tdd" class="container mx-auto my-16 bg-gray-900 rounded-lg shadow-lg p-8">
+    <h2 class="text-3xl font-bold text-red-600">Test-Driven Development (TDD)</h2>
+    <p class="mt-4 text-gray-300">A brief explanation of TDD and how it works...</p>
     <div class="mt-6">
-        <a href="tdd/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">En savoir plus</a>
+        <a href="tdd/index.html" class="btn bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">Learn More</a>
     </div>
 </section>
 
-<!-- Section ATDD -->
-<section id="atdd" class="container mx-auto my-16 bg-white rounded-lg shadow-lg p-8">
-    <h2 class="text-3xl font-bold text-indigo-600">Développement Piloté par les Tests d'Acceptation (ATDD)</h2>
-    <p class="mt-4 text-gray-700">L'ATDD met l'accent sur la collaboration entre les développeurs, les testeurs et les parties prenantes pour écrire des tests d'acceptation avant le début du développement.</p>
+<!-- ATDD Section -->
+<section id="atdd" class="container mx-auto my-16 bg-gray-900 rounded-lg shadow-lg p-8">
+    <h2 class="text-3xl font-bold text-red-600">Acceptance Test-Driven Development (ATDD)</h2>
+    <p class="mt-4 text-gray-300">ATDD emphasizes collaboration between developers, testers, and stakeholders to write acceptance tests before development begins.</p>
     <div class="mt-6">
-        <a href="atdd/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">En savoir plus</a>
+        <a href="atdd/index.html" class="btn bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">Learn More</a>
     </div>
 </section>
 
-<!-- Section BDD -->
-<section id="bdd" class="container mx-auto my-16 bg-white rounded-lg shadow-lg p-8">
-    <h2 class="text-3xl font-bold text-indigo-600">Développement Piloté par le Comportement (BDD)</h2>
-    <p class="mt-4 text-gray-700">Le BDD se concentre sur la définition du comportement du système à travers des exemples en utilisant un format simple Donné-Quand-Alors.</p>
+<!-- BDD Section -->
+<section id="bdd" class="container mx-auto my-16 bg-gray-900 rounded-lg shadow-lg p-8">
+    <h2 class="text-3xl font-bold text-red-600">Behavior-Driven Development (BDD)</h2>
+    <p class="mt-4 text-gray-300">BDD focuses on defining system behavior through examples using a simple Given-When-Then format.</p>
     <div class="mt-6">
-        <a href="bdd/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">En savoir plus</a>
+        <a href="bdd/index.html" class="btn bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">Learn More</a>
     </div>
 </section>
 
-<!-- Section Shift Left -->
-<section id="shiftleft" class="container mx-auto my-16 bg-white rounded-lg shadow-lg p-8">
-    <h2 class="text-3xl font-bold text-indigo-600">Test en Shift Left</h2>
-    <p class="mt-4 text-gray-700">Le test en Shift Left consiste à déplacer les tests plus tôt dans le processus de développement pour détecter et corriger les bogues plus rapidement.</p>
+<!-- Shift Left Section -->
+<section id="shiftleft" class="container mx-auto my-16 bg-gray-900 rounded-lg shadow-lg p-8">
+    <h2 class="text-3xl font-bold text-red-600">Shift Left Testing</h2>
+    <p class="mt-4 text-gray-300">Shift Left testing involves moving tests earlier in the development process to catch and fix bugs faster.</p>
     <div class="mt-6">
-        <a href="shiftleft/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">En savoir plus</a>
+        <a href="shiftleft/index.html" class="btn bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300">Learn More</a>
     </div>
 </section>
 
-
-<!-- Pied de page -->
-<footer class="bg-gray-900 text-white text-center py-4">
-    <p>Copyright © 2024 - Belhaj Ouajdi</p>
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-4">
+    <p>Copyright © 2025 - Gomycode</p>
 </footer>
 
 <!-- Scripts -->

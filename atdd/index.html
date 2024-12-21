@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Développement Piloté par les Tests d'Acceptation (ATDD)</title>
+    <title>Acceptance Test Driven Development (ATDD)</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css"> <!-- Fichier de style global -->
-    <link rel="stylesheet" href="../css/styles-atdd.css"> <!-- Fichier de style spécifique à ATDD -->
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Global Styles -->
+    <link rel="stylesheet" href="../css/styles-atdd.css"> <!-- ATDD Specific Styles -->
 </head>
-<body>
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-gray-900 shadow-lg">
-    <!-- Bouton de menu hamburger -->
+<body class="bg-gray-900 text-white">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-red-800 shadow-lg">
     <div id="menu-button" class="menu-btn">
         <div class="menu-btn__burger"></div>
     </div>
     <ul id="navbar-menu" class="navbar-nav ml-auto hidden">
-        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../tdd/index.html">TDD</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../atdd/index.html">ATDD</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../bdd/index.html">BDD</a></li>
@@ -24,56 +24,60 @@
     </ul>
 </nav>
 
-<!-- Section d'en-tête -->
-<header class="jumbotron text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-12 relative">
-    <h1 class="text-4xl font-bold">Développement Piloté par les Tests d'Acceptation (ATDD)</h1>
-    <p class="text-lg mt-4">Collaborez avec les parties prenantes pour définir des critères d'acceptation avant de commencer le développement.</p>
+<!-- Header Section -->
+<header class="jumbotron text-center bg-gradient-to-r from-red-600 via-black to-red-900 text-white py-12 relative">
+    <h1 class="text-4xl font-bold">Acceptance Test Driven Development (ATDD)</h1>
+    <p class="text-lg mt-4">Collaborate with stakeholders to define acceptance criteria before starting development.</p>
 </header>
 
-<!-- Section d'explication de l'ATDD -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Exemple interactif d'ATDD : Création de compte utilisateur</h2>
-    <p>Assurez-vous que les utilisateurs peuvent créer un compte en fournissant un email valide, un mot de passe sécurisé et leur nom.</p>
+<!-- ATDD Explanation Section -->
+<section class="container mx-auto my-10 p-8 bg-black text-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Interactive ATDD Example: User Account Creation</h2>
+    <p>Ensure that users can create an account by providing a valid email, a secure password, and their name.</p>
 
-    <!-- Formulaire de création de compte -->
-    <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+    <!-- Account Creation Form -->
+    <div class="bg-gray-800 p-4 rounded-lg shadow-inner">
         <form id="account-form">
-            <label for="email" class="block mb-2">Entrez votre email :</label>
-            <input id="email" type="email" class="p-2 border rounded mb-4 w-full" placeholder="utilisateur@exemple.com" />
+            <label for="email" class="block mb-2">Enter your email:</label>
+            <input id="email" type="email" class="p-2 border rounded mb-4 w-full" placeholder="user@example.com" />
 
-            <label for="password" class="block mb-2">Entrez votre mot de passe :</label>
-            <input id="password" type="password" class="p-2 border rounded mb-4 w-full" placeholder="MotDePasse123" />
+            <label for="password" class="block mb-2">Enter your password:</label>
+            <input id="password" type="password" class="p-2 border rounded mb-4 w-full" placeholder="Password123" />
 
-            <label for="name" class="block mb-2">Entrez votre nom :</label>
-            <input id="name" type="text" class="p-2 border rounded mb-4 w-full" placeholder="Jean Dupont" />
+            <label for="name" class="block mb-2">Enter your name:</label>
+            <input id="name" type="text" class="p-2 border rounded mb-4 w-full" placeholder="John Doe" />
 
-            <button id="create-account" type="button" class="btn bg-indigo-600 text-white px-4 py-2 mt-4">
-                Créer un compte
+            <button id="create-account" type="button" class="btn bg-red-600 text-white px-4 py-2 mt-4">
+                Create Account
             </button>
         </form>
         <div id="account-result" class="mt-4 text-xl font-bold"></div>
     </div>
 </section>
 
-<!-- Section Quiz -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Quiz : Testez vos connaissances</h2>
+<!-- Quiz Section -->
+<section class="container mx-auto my-10 p-8 bg-black text-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Quiz: Test Your Knowledge</h2>
     <div class="quiz">
-        <p>Quel champ est obligatoire pour créer un compte ?</p>
-        <button id="quiz-answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Mot de passe</button>
-        <button id="quiz-answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Nom</button>
-        <button id="quiz-answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Email</button>
-        <button id="quiz-answer4" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Tous les champs ci-dessus</button>
+        <p>Which field is required to create an account?</p>
+        <button id="quiz-answer1" class="btn bg-red-500 text-white px-4 py-2 mt-2">Password</button>
+        <button id="quiz-answer2" class="btn bg-red-500 text-white px-4 py-2 mt-2">Name</button>
+        <button id="quiz-answer3" class="btn bg-red-500 text-white px-4 py-2 mt-2">Email</button>
+        <button id="quiz-answer4" class="btn bg-red-500 text-white px-4 py-2 mt-2">All of the above</button>
     </div>
 </section>
+
+<!-- Footer -->
+<footer class="text-center py-6">
+    <p class="text-white">© GoMyCode 2025</p>
+    <a href="../index.html" class="btn bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out">
+        Home
+    </a>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="../scripts/atdd.js"></script>
-<!-- Bouton Retour Accueil -->
-<footer class="text-center py-6">
-    <a href="../index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out">
-        Accueil
-    </a>
-</footer>
+
 </body>
 </html>

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Développement Piloté par les Tests (TDD)</title>
+    <title>Test-Driven Development (TDD)</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-gray-900 shadow-lg">
-    <!-- Bouton de menu hamburger -->
+<body class="bg-gray-900 text-white">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-red-900 shadow-lg">
+    <!-- Hamburger Menu Button -->
     <div id="menu-button" class="menu-btn">
         <div class="menu-btn__burger"></div>
     </div>
     <ul id="navbar-menu" class="navbar-nav ml-auto hidden">
-        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../tdd/index.html">TDD</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../atdd/index.html">ATDD</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../bdd/index.html">BDD</a></li>
@@ -23,49 +24,49 @@
     </ul>
 </nav>
 
-<!-- Section d'en-tête -->
-<header class="jumbotron text-center bg-gradient-to-r from-green-400 via-yellow-500 to-red-600 text-white py-12">
-    <h1 class="text-4xl font-bold">Développement Piloté par les Tests (TDD)</h1>
-    <p class="text-lg mt-4">Apprenez le processus Red-Green-Refactor de manière interactive</p>
+<!-- Header Section -->
+<header class="jumbotron text-center bg-gradient-to-r from-red-600 via-black to-red-800 text-white py-12">
+    <h1 class="text-4xl font-bold">Test-Driven Development (TDD)</h1>
+    <p class="text-lg mt-4">Learn the Red-Green-Refactor process interactively</p>
 </header>
 
-<!-- Explication visuelle de Red-Green-Refactor -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Cycle Red-Green-Refactor</h2>
+<!-- Red-Green-Refactor Explanation -->
+<section class="container mx-auto my-10 p-8 bg-black rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-red-600">Red-Green-Refactor Cycle</h2>
     <div class="grid grid-cols-3 gap-4 text-center">
-        <div class="red-box">
-            <h3 class="text-xl font-semibold">Rouge</h3>
-            <p>Écrivez un test qui échoue</p>
+        <div class="bg-red-600 p-4 rounded-lg">
+            <h3 class="text-xl font-semibold">Red</h3>
+            <p>Write a failing test</p>
         </div>
-        <div class="green-box">
-            <h3 class="text-xl font-semibold">Vert</h3>
-            <p>Écrivez du code pour réussir le test</p>
+        <div class="bg-green-600 p-4 rounded-lg">
+            <h3 class="text-xl font-semibold">Green</h3>
+            <p>Write code to make the test pass</p>
         </div>
-        <div class="refactor-box">
-            <h3 class="text-xl font-semibold">Refactoriser</h3>
-            <p>Réorganisez le code</p>
+        <div class="bg-gray-600 p-4 rounded-lg">
+            <h3 class="text-xl font-semibold">Refactor</h3>
+            <p>Refactor the code</p>
         </div>
     </div>
 </section>
 
-<!-- Éditeur de code interactif -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Exemple interactif de TDD</h2>
-    <div id="editor-container" class="bg-gray-100 p-4 rounded-lg shadow-inner">
+<!-- Interactive TDD Example -->
+<section class="container mx-auto my-10 p-8 bg-black rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-red-600">Interactive TDD Example</h2>
+    <div id="editor-container" class="bg-gray-800 p-4 rounded-lg shadow-inner">
         <pre id="code-editor"></pre>
-        <button id="run-code" class="btn bg-green-600 text-white px-4 py-2 mt-4">Exécuter le test</button>
+        <button id="run-code" class="btn bg-red-600 text-white px-4 py-2 mt-4">Run Test</button>
         <div id="result" class="mt-4"></div>
     </div>
 </section>
 
-<!-- Section Quiz -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Quiz : Testez vos connaissances</h2>
+<!-- Quiz Section -->
+<section class="container mx-auto my-10 p-8 bg-black rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-red-600">Quiz: Test Your Knowledge</h2>
     <div class="quiz">
-        <p>Quelle étape implique d'améliorer le code sans modifier son comportement ?</p>
-        <button id="answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Rouge</button>
-        <button id="answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Vert</button>
-        <button id="answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Refactoriser</button>
+        <p>Which step involves improving the code without changing its behavior?</p>
+        <button id="answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Red</button>
+        <button id="answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Green</button>
+        <button id="answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Refactor</button>
     </div>
 </section>
 
@@ -73,6 +74,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
 <script src="../scripts/tdd.js"></script>
+
+<!-- Footer Section -->
+<footer class="bg-red-900 text-white text-center py-4">
+    <p>Copyright © 2025 - GoMyCode</p>
+</footer>
 
 </body>
 </html>

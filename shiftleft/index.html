@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test en Shift Left</title>
+    <title>Shift Left Testing</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/shiftleft-specific.css"> <!-- Styles personnalisés pour Shift Left -->
+    <link rel="stylesheet" href="../css/shiftleft-specific.css"> <!-- Custom styles for Shift Left -->
 </head>
-<body>
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-gray-900 shadow-lg">
-    <!-- Bouton menu hamburger -->
+<body class="font-sans bg-gray-900 text-white">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-red-900 shadow-lg">
+    <!-- Hamburger menu button -->
     <div id="menu-button" class="menu-btn">
         <div class="menu-btn__burger"></div>
     </div>
     <ul id="navbar-menu" class="navbar-nav ml-auto hidden">
-        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../tdd/index.html">TDD</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../atdd/index.html">ATDD</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="../bdd/index.html">BDD</a></li>
@@ -24,23 +25,23 @@
     </ul>
 </nav>
 
-<!-- Section En-tête -->
-<header class="jumbotron text-center bg-gradient-to-r from-green-400 via-yellow-400 to-blue-400 text-white py-12">
-    <h1 class="text-4xl font-bold">Test en Shift Left</h1>
-    <p class="text-lg mt-4">Découvrez comment tester plus tôt dans le processus de développement peut améliorer la qualité et l'efficacité.</p>
+<!-- Header Section -->
+<header class="jumbotron text-center bg-gradient-to-r from-red-600 via-black to-red-900 text-white py-12">
+    <h1 class="text-4xl font-bold">Shift Left Testing</h1>
+    <p class="text-lg mt-4">Learn how shifting tests earlier in the development process can improve quality and efficiency.</p>
 </header>
 
-<!-- Section d'Explication Shift Left -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Qu'est-ce que le Test en Shift Left ?</h2>
-    <p>Le test en Shift Left consiste à effectuer des tests plus tôt dans le cycle de vie du développement logiciel, ce qui permet de détecter et corriger les bugs plus rapidement, réduisant ainsi les coûts et améliorant la qualité du logiciel.</p>
+<!-- Shift Left Explanation Section -->
+<section class="container mx-auto my-10 p-8 bg-black rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">What is Shift Left Testing?</h2>
+    <p>Shift Left Testing involves performing tests earlier in the software development lifecycle, enabling faster detection and resolution of bugs, reducing costs, and improving software quality.</p>
 
-    <!-- Exemple interactif 1 : Analyse statique du code -->
-    <div class="bg-gray-100 p-4 rounded-lg shadow-inner mt-6">
-        <h3 class="text-xl font-bold mb-4">Exemple 1 : Analyse Statique du Code</h3>
-        <p>Le test en Shift Left implique souvent l'exécution d'outils d'analyse statique juste après l'écriture du code. Voici un extrait de code de `main.js` :</p>
+    <!-- Interactive Example 1: Static Code Analysis -->
+    <div class="bg-gray-800 p-4 rounded-lg shadow-inner mt-6">
+        <h3 class="text-xl font-bold mb-4">Example 1: Static Code Analysis</h3>
+        <p>Shift Left Testing often includes running static analysis tools right after code is written. Here’s a code snippet from `main.js`:</p>
 
-        <!-- Fenêtre de code -->
+        <!-- Code window -->
         <div class="bg-black text-white p-4 rounded-lg mt-4">
             <pre id="main-js-code">
 function add(a, b) {
@@ -52,17 +53,17 @@ function subtract(a, b) {
 }
             </pre>
         </div>
-        <p class="mt-4">Effectuons maintenant l'analyse statique de ce code :</p>
-        <button id="run-static-analysis" class="btn bg-indigo-600 text-white px-4 py-2 mt-4">Lancer l'Analyse Statique</button>
+        <p class="mt-4">Let’s now run a static analysis on this code:</p>
+        <button id="run-static-analysis" class="btn bg-red-600 text-white px-4 py-2 mt-4 hover:bg-red-700">Run Static Analysis</button>
         <pre id="static-analysis-log" class="bg-black text-white p-4 rounded-lg mt-4" style="display: none;"></pre>
     </div>
 
-    <!-- Exemple interactif 2 : Tests unitaires pendant le développement -->
-    <div class="bg-gray-100 p-4 rounded-lg shadow-inner mt-6">
-        <h3 class="text-xl font-bold mb-4">Exemple 2 : Tests Unitaires pendant le Développement</h3>
-        <p>Dans le test en Shift Left, les développeurs écrivent des tests unitaires en même temps que le code pour s'assurer que chaque composant fonctionne correctement. Voici les deux fonctions que nous allons tester :</p>
+    <!-- Interactive Example 2: Unit Tests During Development -->
+    <div class="bg-gray-800 p-4 rounded-lg shadow-inner mt-6">
+        <h3 class="text-xl font-bold mb-4">Example 2: Unit Tests During Development</h3>
+        <p>In Shift Left Testing, developers write unit tests alongside the code to ensure each component works properly. Here are the two functions we’ll test:</p>
 
-        <!-- Fenêtre de code -->
+        <!-- Code window -->
         <div class="bg-black text-white p-4 rounded-lg mt-4">
             <pre id="unit-tests-code">
 function add(a, b) {
@@ -75,29 +76,30 @@ function subtract(a, b) {
             </pre>
         </div>
 
-        <p class="mt-4">Lançons les tests unitaires pour ces deux fonctions :</p>
-        <button id="run-unit-tests" class="btn bg-indigo-600 text-white px-4 py-2 mt-4">Lancer les Tests Unitaires</button>
+        <p class="mt-4">Let’s run the unit tests for these two functions:</p>
+        <button id="run-unit-tests" class="btn bg-red-600 text-white px-4 py-2 mt-4 hover:bg-red-700">Run Unit Tests</button>
         <pre id="unit-tests-log" class="bg-black text-white p-4 rounded-lg mt-4" style="display: none;"></pre>
     </div>
 </section>
 
-<!-- Section Quiz -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Quiz : Testez vos connaissances</h2>
+<!-- Quiz Section -->
+<section class="container mx-auto my-10 p-8 bg-black rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Quiz: Test Your Knowledge</h2>
     <div class="quiz">
-        <p>Quel est l'objectif principal du test en Shift Left ?</p>
-        <button id="quiz-answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Retarder les tests jusqu'à la fin du développement</button>
-        <button id="quiz-answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Commencer les tests plus tôt dans le processus de développement</button>
-        <button id="quiz-answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Tester uniquement lors de la dernière phase du projet</button>
-        <button id="quiz-answer4" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Réduire les efforts de test</button>
+        <p>What is the main goal of Shift Left Testing?</p>
+        <button id="quiz-answer1" class="btn bg-red-500 text-white px-4 py-2 mt-2 hover:bg-red-600">Delay testing until the end of development</button>
+        <button id="quiz-answer2" class="btn bg-red-500 text-white px-4 py-2 mt-2 hover:bg-red-600">Start testing earlier in the development process</button>
+        <button id="quiz-answer3" class="btn bg-red-500 text-white px-4 py-2 mt-2 hover:bg-red-600">Test only during the final phase of the project</button>
+        <button id="quiz-answer4" class="btn bg-red-500 text-white px-4 py-2 mt-2 hover:bg-red-600">Reduce testing efforts</button>
     </div>
 </section>
 
-<!-- Bouton Accueil -->
+<!-- Footer Section -->
 <footer class="text-center py-6">
-    <a href="../index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out">
-        Accueil
+    <a href="../index.html" class="btn bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out">
+        Home
     </a>
+    <p class="mt-4 text-sm text-gray-400">&copy; GoMyCode 2025. All rights reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
